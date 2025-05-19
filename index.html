@@ -1,40 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple Text Share</title>
+<!--   <title>Simple Text Share</title> -->
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 </head>
 <body>
-  <h2>📤 Share Text Across Devices</h2>
-  <textarea id="text" rows="10" cols="50" placeholder="Type something..."></textarea><br/>
-  <button onclick="share()">Share</button>
-  <button onclick="fetch()">Fetch</button>
-
-  <script>
-    // Paste your config below
-    const firebaseConfig = {
-      apiKey: "AIzaSyCkC2wZ2KfIPgvXXLqHv7zmJ7KPjjNndQY",
-      authDomain: "shareit-374cb.firebaseapp.com",
-      databaseURL: "https://shareit-374cb.firebaseio.com",
-      projectId: "shareit-374cb",
-    };
-
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
-
-    function share() {
-      const text = document.getElementById('text').value;
-      db.ref("shared/text").set(text);
-      alert("Text shared!");
-    }
-
-    function fetch() {
-      db.ref("shared/text").once('value').then(snapshot => {
-        document.getElementById('text').value = snapshot.val() || "";
-        alert("Text fetched!");
-      });
-    }
-  </script>
+  <h2>Hii Cutie!</h2>
+  
 </body>
 </html>
